@@ -39,7 +39,7 @@ const run = async () => {
         data: result,
       });
     });
-
+    // this api for get blogs  use id 
     app.get("/blog/:id", async (req, res) => {
       const id = req.params.id;
       const result = await blogsCollection.findOne({ _id: ObjectId(id) });
@@ -51,7 +51,7 @@ const run = async () => {
         data: result,
       });
     });
-
+// this api for post blogs 
     app.post("/blog", async (req, res) => {
       const blog = req.body;
       const result = await blogsCollection.insertOne(blog);
@@ -63,7 +63,7 @@ const run = async () => {
         data: result,
       });
     });
-
+// this api for patch blog use id 
     app.patch("/blog/:id", async (req, res) => {
       const id = req.params.id;
       const body = req.body;
@@ -80,7 +80,7 @@ const run = async () => {
         data: result,
       });
     });
-
+// this api for delete a blog use id 
     app.delete("/blog/:id", async (req, res) => {
       const id = req.params.id;
       const result = await blogsCollection.deleteOne({ _id: ObjectId(id) });
@@ -92,7 +92,7 @@ const run = async () => {
         data: result,
       });
     });
-
+// this api for post user info 
     app.post("/user", async (req, res) => {
       const user = req.body;
       const result = await usersCollection.insertOne(user);
@@ -104,7 +104,7 @@ const run = async () => {
         data: result,
       });
     });
-
+// this api for get user email 
     app.get("/user/:email", async (req, res) => {
       const email = req.params.email;
       const result = await usersCollection.findOne({ email: email });
