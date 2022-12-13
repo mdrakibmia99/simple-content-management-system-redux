@@ -92,6 +92,18 @@ const run = async () => {
       });
     });
 
+    app.post("/user", async (req, res) => {
+      const user = req.body;
+      const result = await usersCollection.insertOne(user);
+
+      res.status(202).send({
+        status: true,
+        message: "Created",
+        description: "Successfully created new user.",
+        data: result,
+      });
+    });
+
     
     });
   } finally {
