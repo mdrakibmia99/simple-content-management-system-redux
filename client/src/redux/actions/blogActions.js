@@ -28,15 +28,17 @@ export const fetchBlogData = (data) => {
   };
 };
 
-export const updateBlogData = (data) => {
-  return {
-    type: blogActionTypes.UPDATE_CONTENT,
-    payload: data,
-  };
-};
+
 
 export const toggleSortBy = () => {
   return {
     type: blogActionTypes.TOGGLE_SORTBY,
+  };
+};
+
+export const updateBlogData = (data) => {
+  return {
+    type: blogActionTypes.UPDATE_CONTENT,
+    payload: data,
   };
 };
