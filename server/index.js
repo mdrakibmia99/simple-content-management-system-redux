@@ -27,8 +27,19 @@ const run = async () => {
     const usersCollection = db.collection("users");
     console.log("Simple CMS Redux connected successfully.");
 
-   
+    app.get("/blogs", async (req, res) => {
+      const blogs = blogsCollection.find({});
+      const result = await blogs.toArray();
+
+      res.status(200).send({
+        status: true,
+        message: "OK",
+        description: "Fetching all blogs successfully.",
+        data: result,
+      });
     });
+
+    
   } finally {
     // await client.close();
   }
