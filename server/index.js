@@ -104,7 +104,16 @@ const run = async () => {
       });
     });
 
-    
+    app.get("/user/:email", async (req, res) => {
+      const email = req.params.email;
+      const result = await usersCollection.findOne({ email: email });
+
+      res.status(200).send({
+        status: true,
+        message: "OK",
+        description: "Fetching specific blog successfully.",
+        data: result,
+      });
     });
   } finally {
     // await client.close();
