@@ -39,7 +39,20 @@ const run = async () => {
       });
     });
 
-    
+    app.get("/blog/:id", async (req, res) => {
+      const id = req.params.id;
+      const result = await blogsCollection.findOne({ _id: ObjectId(id) });
+
+      res.status(200).send({
+        status: true,
+        message: "OK",
+        description: "Fetching specific blog successfully.",
+        data: result,
+      });
+    });
+
+   
+    });
   } finally {
     // await client.close();
   }
