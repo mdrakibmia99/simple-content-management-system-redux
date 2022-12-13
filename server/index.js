@@ -51,8 +51,18 @@ const run = async () => {
       });
     });
 
-   
+    app.post("/blog", async (req, res) => {
+      const blog = req.body;
+      const result = await blogsCollection.insertOne(blog);
+
+      res.status(201).send({
+        status: true,
+        message: "Created",
+        description: "New blog insert successfully.",
+        data: result,
+      });
     });
+
   } finally {
     // await client.close();
   }
