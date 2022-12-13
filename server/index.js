@@ -80,6 +80,18 @@ const run = async () => {
       });
     });
 
+    app.delete("/blog/:id", async (req, res) => {
+      const id = req.params.id;
+      const result = await blogsCollection.deleteOne({ _id: ObjectId(id) });
+
+      res.status(202).send({
+        status: true,
+        message: "Accepted",
+        description: "Remove existing blog successfully.",
+        data: result,
+      });
+    });
+
     
     });
   } finally {
