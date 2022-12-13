@@ -63,6 +63,25 @@ const run = async () => {
       });
     });
 
+    app.patch("/blog/:id", async (req, res) => {
+      const id = req.params.id;
+      const body = req.body;
+      const result = await blogsCollection.updateOne(
+        { _id: ObjectId(id) },
+        { $set: body },
+        { upsert: true }
+      );
+
+      res.status(202).send({
+        status: true,
+        message: "Accepted",
+        description: "Update existing blog successfully.",
+        data: result,
+      });
+    });
+
+    
+    });
   } finally {
     // await client.close();
   }
