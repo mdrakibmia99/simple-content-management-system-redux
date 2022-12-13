@@ -18,3 +18,18 @@ const client = new MongoClient(uri, {
   useUnifiedTopology: true,
   serverApi: ServerApiVersion.v1,
 });
+
+
+
+/* application connection establishment */
+app.get("/", (req, res) => {
+  res.status(200).json({
+    status: true,
+    message: "OK",
+    description: "Simple CMS Redux connection establish successfully.",
+  });
+});
+
+app.listen(port, () => {
+  console.log(`Simple CMS Redux listening on port ${port}.`);
+});
