@@ -8,6 +8,7 @@ function useBlogs() {
       .then((res) => res.json())
       .then((data) => setBlogs(data.data))
       .catch((err) => console.log(err));
+      
   }, []);
 
   return blogs;
