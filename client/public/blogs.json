@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Dynamic breakpoints, multi-config, and container queries",
+    "description": "Tailwind CSS v3.2 is here with an absolutely massive amount of new stuff, including support for dynamic breakpoints, multiple config files in a single project, nested groups, parameterized variants, container queries, and more. Well it’s that time again! The time where we quickly go from “I really have no idea what we could even add to a new Tailwind release” to “wow, well this is actually a ridiculous amount of new stuff — we better tag a release before things get completely out of hand”.",
+    "image": "https://tailwindcss.com/_next/static/media/card.65ec124d.jpg",
+    "tag": "programming-language",
+    "author": "Sadia Khanum",
+    "highlights": [
+      "Multiple config files in one project",
+      "ARIA attributes variants",
+      "Container queries variants",
+      "Dynamic group and peer attributes"
+    ],
+    "rating": 5
+  },
+  {
+    "title": "Site templates and all-access",
+    "description": "When I was early in my programming career, I loved following thoughtbot. They were always writing interesting programming articles, producing fantastic screencasts, and publishing incredible books. I could tell they really cared about their craft and it inspired the hell out of me. But when they launched Upcase, the thing I was most excited about wasn’t the courses or weekly videos. What I was most excited about was the source code for Upcase itself — the actual-in-production Rails codebase that they gave you access to when you subscribed.",
+    "image": "https://tailwindcss.com/_next/static/media/code-structure.0e63020e.jpg",
+    "tag": "hadoop",
+    "author": "Md Rakib Mia",
+    "highlights": [
+      "Syntax is a documentation site template powered by Stripe’s new Markdoc library that’s perfect for things like open-source projects or product documentation.",
+      "Primer is a landing page template for ebooks and courses that bakes in a lot of the best practices we’ve learned releasing our own info products.",
+      "Salient is a stunning but simple SaaS marketing website you can quickly adapt for your next idea without burning time you wish you were spending on the actual product.",
+      "Keynote is a beautiful conference website design that works just as well for small local gatherings as it does for international events."
+    ],
+    "rating": 4
+  }
+]
