@@ -19,7 +19,21 @@ const client = new MongoClient(uri, {
   serverApi: ServerApiVersion.v1,
 });
 
+/* application methods integration */
+const run = async () => {
+  try {
+    const db = client.db("simple-cms-redux");
+    const blogsCollection = db.collection("blogs");
+    const usersCollection = db.collection("users");
+    console.log("Simple CMS Redux connected successfully.");
 
+   
+    });
+  } finally {
+    // await client.close();
+  }
+};
+run().catch((err) => console.log(err));
 
 /* application connection establishment */
 app.get("/", (req, res) => {
